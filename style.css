@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --gray: #ADB3BD;
+  --dark-gray: #84949E;
+  --blue: #516B90;
+  --dark-blue: #4B5C74;
+}
+
+body {
+  background: url("/images/bg-l.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+   /* OR  background: url("/images/bg-l.png") no-repeat center center fixed;  */
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.card {
+  height: 65vh;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px rgba(101, 101, 101, 0.532);
+  transition: all ease 0.4s;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 10px black;
+}
+
+.img_container {
+  height: 40%;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  transform: translateY(-60px);
+}
+
+.text_container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 5px;
+  padding: 0 42px;
+}
+
+.text_container h1 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.text_container p {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.payment_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  overflow-y: hidden;
+}
+
+.annual_plan {
+  background-color: var(--gray);
+  height: 60px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 13px;
+}
+
+.btn_container {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  align-self: center;
+  margin-left: 10px;
+  background-color: #84949E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.annual_plan button {
+  height: 28px;
+  width: 28px;
+  border-radius: 100%;
+  border: none;  
+  background-color: var(--dark-blue);
+  transition: all ease 0.3s;
+  cursor: pointer;
+}
+
+
+.annual_plan .btn_container:hover button {
+  box-shadow: 0 0 15px var(--dark-blue),
+              0 0 5px var(--dark-blue);
+}
+
+.annual_plan div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+}
+
+.annual_plan div h3 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.annual_plan div p {
+  font-size: 13px;
+  margin-right: 15px ;
+}
+
+.annual_plan a {
+  align-self: center;
+  margin-right: 10px;
+  color: #516B90;
+  font-weight: 500;
+  padding-bottom: 1.5px;
+  border-bottom: 2px solid;
+  transition: all ease 0.3s;
+}
+
+.annual_plan a:hover {
+  color: #ffffff;
+  scale: 1.1;
+}
+
+.procced{
+  margin-top: 25px ;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.procced > a {
+  width: 100%;
+  background-color: var(--dark-blue);
+  color: #ffffff;
+  border-radius: 7px;
+  height: 30px;
+  text-align: center;
+  padding-top: 2.5px;
+  font-size: 1rem;
+  transition: all ease 0.4s;
+}
+
+.procced > a:nth-of-type(2) {
+  width: 100%;
+  background-color: transparent;
+  border-radius: 7px;
+  color: #999999;
+  margin-top: 6px;
+}
+.procced > a:nth-of-type(1) {
+  box-shadow: 0 0 10px var(--dark-blue);
+  text-shadow: 0 0 10px black;
+}
+
+
+.procced > a:hover {
+  transform: scale(1.08);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------*/
+/*---------  Mobile device  ---------*/
+/*-----------------------------------*/
+
+
+
+@media screen and (max-width: 640px) {
+  body {
+    background: url("/images/bg-s.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+     /* OR  background: url("/images/bg-l.png") no-repeat center center fixed;  */
+  }
+
+  .card {
+    height: 80vh;
+    width: 330px;
+  }
+
+  .img_container {
+    height: 35%;
+    overflow: hidden;
+  }
+  
+  .card img {
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    transform: translateY(-10px);
+  }
+  
+  .text_container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 5px;
+    padding: 0 22px;
+  }
+  
+  .text_container h1 {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  
+  .text_container p {
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    color: #686868;
+  }
+  
+  .payment_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    overflow-y: hidden;
+  }
+  
+  .annual_plan {
+    background-color: var(--gray);
+    height: 80px;
+    border-radius: 8px;
+    margin-top: 13px;
+  }
+  
+  .btn_container {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    align-self: center;
+    margin-left: 10px;
+    background-color: #84949E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .annual_plan button {
+    height: 35px;
+    width: 35px;
+    align-self: center;
+  }
+  
+  
+  .annual_plan .btn_container:hover button {
+    box-shadow: 0 0 15px var(--dark-blue),
+                0 0 5px var(--dark-blue);
+  }
+  
+  .annual_plan div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+  }
+  
+  .annual_plan div h3 {
+    font-size: 14px;
+    font-weight: 700;
+    padding-right: 50px;
+  }
+  
+  .annual_plan div p {
+    font-size: 13px;
+    margin-right: 15px ;
+    padding-right: 50px;
+  }
+  
+  .annual_plan a {
+    align-self: center;
+    margin-right: 10px;
+    color: #516B90;
+    font-weight: 500;
+    padding-bottom: 1.5px;
+    border-bottom: 2px solid;
+    transition: all ease 0.3s;
+  }
+  
+  .annual_plan a:hover {
+    color: #ffffff;
+    scale: 1.1;
+  }
+  
+  .procced{
+    margin-top: 45px ;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .procced > a {
+    width: 100%;
+    background-color: var(--dark-blue);
+    color: #ffffff;
+    border-radius: 7px;
+    height: 50px;
+    text-align: center;
+    padding-top: 13px;
+    font-size: 1rem;
+    transition: all ease 0.4s;
+  }
+  
+  .procced > a:nth-of-type(2) {
+    width: 100%;
+    background-color: transparent;
+    border-radius: 7px;
+    color: #999999;
+    margin-top: 6px;
+  }
+  .procced > a:nth-of-type(1) {
+    box-shadow: 0 0 10px var(--dark-blue);
+    text-shadow: 0 0 10px black;
+  }
+  
+  
+  .procced > a:hover {
+    transform: scale(1.08);
+  }
+}
+
